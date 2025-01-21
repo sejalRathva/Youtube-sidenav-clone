@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+html,body{
+    height: 100%;
+}
+body{
+    margin:0;
+    font-family: Roboto, "Helventic Neue", sans-serif;
+    --primary-color:#cc0000;
+}
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated.mdc-list-item--with-leading-icon .mdc-list-item__start {
+    color: #cc0000 !important;
+}
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--selected .mdc-list-item__primary-text, .mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated .mdc-list-item__primary-text {
+    color: #cc0000!important;
+}.selected-menu-item[_ngcontent-ng-c616888906] {
+    border-left-color: #cc0000!important;
+    background: rgba(0, 0, 0, 0.05);
+}
+

@@ -1,0 +1,29 @@
+<div class="sidenav-header">
+  <img
+    src="../../../assets/me.jpg"
+    [height]="profilePicSize()"
+    [width]="profilePicSize()"
+  />
+  <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
+    <h2>Your channel</h2>
+    <p>Sejal Rathva</p>
+  </div>
+</div>
+<mat-nav-list>
+  <a
+    class="menu-item"
+    mat-list-item
+    *ngFor="let item of menuItems()"
+    [routerLink]="item.route"
+    routerLinkActive="selected-menu-item"
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <mat-icon
+      [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'"
+      matListItemIcon
+      >{{ item.icon }}</mat-icon
+    >
+    <span matListTitle *ngIf="!sideNavCollapsed()">{{ item.label }}</span>
+  </a>
+</mat-nav-list>
